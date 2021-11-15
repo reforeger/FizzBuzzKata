@@ -2,44 +2,31 @@ package Buzz;
 
 
 
-import org.junit.Assert;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
 
-class CaseBuzzTest {
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-	@BeforeEach
-	void setUp() throws Exception {
+public class CaseBuzzTest {
+
+	@Before
+	public void setUp() throws Exception {
 	}
 
-	@AfterEach
-	void tearDown() throws Exception {
+	@After
+	public void tearDown() throws Exception {
 	}
 	
-    @Test
-    public void getResultShouldReturnFizzIfTheNumberIsDividableBy3() {
-        Assert.assertEquals("fizz", FizzBuzz.getResult(3));
-    }
- 
-    @Test
-    public void getResultShouldReturnBuzzIfTheNumberIsDividableBy5() {
-        Assert.assertEquals("buzz", FizzBuzz.getResult(5));
-        Assert.assertEquals("buzz", FizzBuzz.getResult(10));
-    }
- 
-    @Test
-    public void getResultShouldReturnBuzzIfTheNumberIsDividableBy15() {
-        Assert.assertEquals("fizzbuzz", FizzBuzz.getResult(15));
-        Assert.assertEquals("fizzbuzz", FizzBuzz.getResult(30));
-    }
- 
-    @Test
-    public void getResultShouldReturnTheSameNumberIfNoOtherRequirementIsFulfilled() {
-        Assert.assertEquals("1", FizzBuzz.getResult(1));
-        Assert.assertEquals("2", FizzBuzz.getResult(2));
-        Assert.assertEquals("4", FizzBuzz.getResult(4));
-    }
+	@Test
+	public void sholdReturn100() {
+		FizzBuzz fz = new FizzBuzz();
+		assertEquals(100, fz.getNumbers().length);
+	}
 	
-
+	@Test
+	public void mupltiplesOffFive() {
+		FizzBuzz fb = new FizzBuzz();
+	}
+	
 }
