@@ -34,4 +34,11 @@ public class CaseBuzzTest {
 		FizzBuzz fb = new FizzBuzz();
 		assertEquals("fizz", fb.fizzbuzz(3));
 	}
+	
+	@Test
+	public void mupltiplesOfFiveten() {
+		FizzBuzz fb = new FizzBuzz();
+		assertEquals("fizzbuzz", fb.fizzbuzz(15));
+	}
+	
 }
